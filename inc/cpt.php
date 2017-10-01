@@ -28,14 +28,8 @@ function custom_post_type() {
         'label'               => __( 'spaces', 'wh701' ),
         'description'         => __( 'Space news and reviews', 'wh701' ),
         'labels'              => $labels,
-        // Features this CPT supports in Post Editor
         'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
-        // You can associate this CPT with a taxonomy or custom taxonomy. 
         'taxonomies'          => array( 'genres' ),
-        /* A hierarchical CPT is like Pages and can have
-        * Parent and child items. A non-hierarchical CPT
-        * is like Posts.
-        */ 
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -43,6 +37,7 @@ function custom_post_type() {
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
         'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-admin-multisite',
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
@@ -54,10 +49,5 @@ function custom_post_type() {
     register_post_type( 'spaces', $args );
  
 }
- 
-/* Hook into the 'init' action so that the function
-* Containing our post type registration is not 
-* unnecessarily executed. 
-*/
- 
+
 add_action( 'init', 'custom_post_type', 0 );

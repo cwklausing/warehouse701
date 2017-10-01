@@ -1,20 +1,8 @@
-// Variables
-
-$primary-font: 'Helvetica';
-$secondary-font: 'Arial';
+$primary-font: "Open Sans"; // 'Open Sans'
+$secondary-font: "Slabo 27px"; // 'Slabo'
 
 // Colors
-$black: #000;
+$black: #111;
 $gray: #999;
-
-$hover-color: $gray; 
-
-// Breakpoints
-$bkpts: (
-	'xs': em(480),
-	'sm': em(640),
-	'md': em(800),
-	'lg': em(960),
-	'xl': em(1020),
-	'xxl': em(1180),
-);
+$cream: #f3efe8;
+$hover-color: $gray;

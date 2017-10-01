@@ -1,19 +1,25 @@
-/* ===========================================================
-  Typography
-============================================================ */
-
 html {
   font-size: 62.5%;
 }
 
 body {
+  background-color: $cream;
   font-family: $primary-font;
+  line-height: 1.6;
   color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
 }
 
 h1 {
   font-size: 3.6rem;
-  padding: 30px 0;
 }
 
 h2 {
@@ -22,12 +28,10 @@ h2 {
 
 h3 {
   font-size: 2.8rem;
-  line-height: 3.6rem;
 }
 
 p {
-  font-size: 2.4rem;
-  line-height: 3.6rem;
+  font-size: 2rem;
 }
 
 a {
@@ -42,8 +46,8 @@ a {
 }
 
 ul {
-  -webkit-margin-before:0;
-  -webkit-margin-after:0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
   -webkit-padding-start: 0;
 }
 
@@ -54,17 +58,8 @@ li {
 
 span {
   font-size: 2.4rem;
-  line-height: 3.6rem;
 }
 
 pre {
   word-wrap: break-word;
-}
-
-.center {
-  text-align: center;
-}
-
-.whitetext {
-  color: white;
 }

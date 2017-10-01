@@ -9,6 +9,7 @@ $menu_array = array(
   'container'       => false,
   'theme_location'  => 'main',
 );
+$bubble_text = get_field( 'bubble_text', 'option' );
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,11 @@ $menu_array = array(
 
 <body <?php body_class(); ?> >
   <header class="site-header">
+    <div class="header-circle">
+      <a href="<?php echo home_url(); ?>" class="header-circle__inner">
+        <span class="header-circle__text"><?php echo esc_html($bubble_text); ?></span>
+      </a>
+    </div>
     <a href="<?php bloginfo( 'url' ); ?>" class="site-header__link">
       <h1 class="site-header__title"><?php bloginfo( 'name' ); ?></h1>
     </a>

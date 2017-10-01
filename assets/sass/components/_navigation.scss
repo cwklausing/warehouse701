@@ -2,8 +2,9 @@
   Navigation
 ============================================================ */
 
-#menu-main-menu, #menu-footer-menu {
-  @include bp(tablet) {
+#menu-main-menu,
+#menu-footer-menu {
+  @include bp(md) {
     padding: 20px 0;
   }
   li {
@@ -15,7 +16,7 @@
 }
 
 #menu-main-menu {
-  @include bp(tablet) {
+  @include bp(md) {
     margin: 20px 10%;
   }
 }
@@ -23,7 +24,7 @@
 .menu-item {
   width: 100%;
   margin: 10px 0;
-  @include bp(tablet) {
+  @include bp(md) {
     width: auto;
     margin: 0;
   }

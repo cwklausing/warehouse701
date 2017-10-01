@@ -1,6 +1,47 @@
-/* ===========================================================
-  Header
-============================================================ */
-header {
-  padding-top: 10px;
+.site-header {
+  background-color: $black;
+  display: flex;
+  padding: 10px;
+  position: relative;
+  justify-content: space-between;
+  &__title {
+    color: $cream;
+    font-size: 2.6rem;
+    letter-spacing: 11px;
+    line-height: 1.2;
+    padding: 10px 0;
+    margin: 0;
+  }
+  &__link {
+    margin-left: 130px;
+  }
+}
+
+.header-circle {
+  border: 2px solid $cream;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  height: 90px;
+  width: 90px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $cream;
+    border: 1px solid $black;
+    border-radius: 50%;
+    height: 90%;
+    width: 90%;
+  }
+  &__text {
+    font-size: 44px;
+    font-family: $secondary-font;
+    color: black;
+  }
 }

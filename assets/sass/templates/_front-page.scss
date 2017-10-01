@@ -1,3 +1,24 @@
-/* ===========================================================
-  Front Page
-============================================================ */
+.home-hero {
+  height: 300px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @include bp(sm) {
+    height: 400px;
+  }
+  @include bp(md) {
+    height: 500px;
+  }
+  @include bp(lg) {
+    height: 600px;
+  }
+}
+
+.home-content {
+  max-width: 87rem;
+  margin: 0 auto 0 12%;
+  padding: 2rem;
+}
+
+.home-spaces {
+}

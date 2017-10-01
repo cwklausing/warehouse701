@@ -1,1 +1,1 @@
-import sample from './inc/sample.js';
+import ShrinkHeader from "./inc/shrink-header.js";

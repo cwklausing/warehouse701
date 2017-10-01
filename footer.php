@@ -5,15 +5,15 @@
 
 $menu_array = array(
   'menu'            => 'Footer Menu',
-  'menu_class'      => 'flexing',
+  'menu_class'      => '',
   'container'       => false,
   'theme_location'  => 'secondary',
 )
 
 ?>
 
-<footer class="flexing">
-  <div class="social-media width-half flexing footer-section">
+<footer class="footer">
+  <div class="social-media footer-section">
     <a href="<?php echo esc_url( $facebook_link ); ?>" target="_blank">
       <svg aria-labelledby="icon-facebook" class="social-media__icon">
         <use xlink:href="#icon-facebook"></use>
@@ -26,7 +26,7 @@ $menu_array = array(
     </a>
   </div>
 
-  <nav class="width-half footer-section">
+  <nav class="footer-section">
     <?php wp_nav_menu( $menu_array ); ?>
   </nav>
 

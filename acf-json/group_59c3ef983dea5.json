@@ -1,0 +1,43 @@
+{
+    "key": "group_59c3ef983dea5",
+    "title": "Global Options",
+    "fields": [
+        {
+            "key": "field_59c3ef9f4bcc0",
+            "label": "Bubble Text",
+            "name": "bubble_text",
+            "type": "text",
+            "instructions": "Should be \"701\". Adding more text will expand the bubble, and possibly overflow the container",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1506013152
+}

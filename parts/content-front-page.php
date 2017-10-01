@@ -4,15 +4,14 @@
  *
  * @package wh701;
  */
+
+$home_gallery = get_field( 'home_page_image' )['sizes']['large'];
 ?>
 
 <main class="home">
-	<header class="home__header">
-		<h1 class="home__title">
-			<?php the_title(); ?>
-		</h1>
-	</header>
-	<div class="home__content">
-		<?php the_content(); ?>
+	<div class="home-hero" style="background-image: url('<?php echo esc_url( $home_gallery ); ?>');"></div>
+	<div class="home-content">
+		<?php get_template_part( 'parts/front-page', 'about' ); ?>
+		<?php get_template_part( 'parts/front-page', 'spaces' ); ?>
 	</div>
 </main>
