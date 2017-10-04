@@ -320,7 +320,6 @@ ul {
   -webkit-padding-start: 0; }
 
 li {
-  text-transform: uppercase;
   list-style: none; }
 
 span {
@@ -347,9 +346,11 @@ main {
 #wpadminbar {
   top: 0; }
 
-/* ===========================================================
-  Navigation
-============================================================ */
+.main-nav {
+  padding-right: 2rem; }
+  .main-nav .page_item a {
+    color: white; }
+
 @media only screen and (min-width: 800px) {
   #menu-main-menu,
   #menu-footer-menu {
@@ -383,9 +384,14 @@ main {
 .site-header {
   background-color: #111;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
-  position: relative;
-  justify-content: space-between; }
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  transition: padding 300ms ease-in-out; }
   .site-header__title {
     color: #f3efe8;
     font-size: 2.6rem;
@@ -395,6 +401,10 @@ main {
     margin: 0; }
   .site-header__link {
     margin-left: 130px; }
+  .site-header.header-shrink {
+    padding: 5px 10px; }
+    .site-header.header-shrink .header-circle {
+      transform: scale(0.8); }
 
 .header-circle {
   border: 2px solid #f3efe8;
@@ -405,9 +415,12 @@ main {
   background-color: #111;
   position: absolute;
   top: 5px;
+  transform: scale(1);
+  transform-origin: 0 0;
   left: 25px;
   height: 90px;
-  width: 90px; }
+  width: 90px;
+  transition: transform 300ms ease-in-out; }
   .header-circle__inner {
     display: flex;
     align-items: center;
@@ -439,9 +452,40 @@ footer {
     .home-hero {
       height: 600px; } }
 
-.home-content {
+.home-about {
   max-width: 87rem;
-  margin: 0 auto 0 12%;
-  padding: 2rem; }
+  padding: 2rem 1rem; }
+  @media only screen and (min-width: 480px) {
+    .home-about {
+      padding: 2rem; } }
+  @media only screen and (min-width: 960px) {
+    .home-about {
+      margin: 0 auto; } }
+  @media only screen and (min-width: 1020px) {
+    .home-about {
+      margin: 0 auto 0 12%; } }
+
+.home-spaces {
+  display: flex;
+  flex-wrap: wrap; }
+  @media only screen and (min-width: 960px) {
+    .home-spaces {
+      flex-direction: column;
+      height: 800px; } }
+
+.home-space {
+  background-size: cover;
+  width: 100%; }
+  .home-space__image {
+    height: 300px; }
+  @media only screen and (min-width: 960px) {
+    .home-space {
+      height: 400px;
+      width: 38%; }
+      .home-space:first-of-type {
+        height: 800px;
+        width: 62%; }
+        .home-space:first-of-type .home-space__image {
+          height: 600px; } }
 
 /*# sourceMappingURL=app.css.map */

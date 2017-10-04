@@ -1,9 +1,14 @@
 .site-header {
   background-color: $black;
   display: flex;
-  padding: 10px;
-  position: relative;
+  align-items: center;
   justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  transition: padding 300ms ease-in-out;
   &__title {
     color: $cream;
     font-size: 2.6rem;
@@ -14,6 +19,12 @@
   }
   &__link {
     margin-left: 130px;
+  }
+  &.header-shrink {
+    padding: 5px 10px;
+    .header-circle {
+      transform: scale(0.8);
+    }
   }
 }
 
@@ -26,9 +37,12 @@
   background-color: $black;
   position: absolute;
   top: 5px;
+  transform: scale(1);
+  transform-origin: 0 0;
   left: 25px;
   height: 90px;
   width: 90px;
+  transition: transform 300ms ease-in-out;
   &__inner {
     display: flex;
     align-items: center;

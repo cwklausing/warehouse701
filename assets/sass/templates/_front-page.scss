@@ -14,11 +14,49 @@
   }
 }
 
-.home-content {
+.home-about {
   max-width: 87rem;
-  margin: 0 auto 0 12%;
-  padding: 2rem;
+  padding: 2rem 1rem;
+
+  @include bp(xs) {
+    padding: 2rem;
+  }
+  @include bp(lg) {
+    margin: 0 auto;
+  }
+  @include bp(xl) {
+    margin: 0 auto 0 12%;
+  }
 }
 
 .home-spaces {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include bp(lg) {
+    flex-direction: column;
+    height: 800px;
+  }
+}
+
+.home-space {
+  background-size: cover;
+  width: 100%;
+
+  &__image {
+    height: 300px;
+  }
+
+  @include bp(lg) {
+    height: 400px;
+    width: 38%;
+    &:first-of-type {
+      height: 800px;
+      width: 62%;
+
+      .home-space__image {
+        height: 600px;
+      }
+    }
+  }
 }
