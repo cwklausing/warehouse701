@@ -1,6 +1,11 @@
-/* ===========================================================
-  Navigation
-============================================================ */
+.main-nav {
+  padding-right: 2rem;
+  .page_item {
+    a {
+      color: white;
+    }
+  }
+}
 
 #menu-main-menu,
 #menu-footer-menu {
