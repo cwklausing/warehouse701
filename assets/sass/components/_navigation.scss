@@ -7,7 +7,39 @@
   .page_item {
     margin-right: 2rem;
     a {
+      display: block;
       color: $yellow;
+      padding: 4px 0;
+      position: relative;
+      // Prevent before/after lines from being seen outside box.
+      overflow: hidden;
+      // On hover, lines fly in from left and right
+      &:before,
+      &:after {
+        display: block;
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        border-top: 2px solid $red;
+        transition: transform 300ms ease-in-out;
+      }
+
+      &:before {
+        top: 0;
+        transform: translateX(-100%);
+      }
+      &:after {
+        bottom: 0;
+        transform: translateX(100%);
+      }
+
+      &:hover {
+        &:before,
+        &:after {
+          transform: translateX(0);
+        }
+      }
     }
   }
 }

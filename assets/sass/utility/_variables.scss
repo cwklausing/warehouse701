@@ -1,11 +1,10 @@
-$primary-font: "Open Sans"; // 'Open Sans'
-$secondary-font: "Slabo 27px"; // 'Slabo'
+$primary-font: "Open Sans", serif; // 'Open Sans'
+$secondary-font: "Slabo 27px", sans-serif; // 'Slabo'
 
 // Colors
 $black: #18121e;
 $blue: #233237;
 $red: #984b43;
 $yellow: #eac67a;
-$gray: #999;
 $cream: #f3efe8;
-$hover-color: $gray;
+$hover-color: $blue;

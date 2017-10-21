@@ -294,7 +294,7 @@ html {
 
 body {
   background-color: #f3efe8;
-  font-family: "Open Sans";
+  font-family: "Open Sans", serif;
   line-height: 1.6;
   color: #18121e; }
 
@@ -304,7 +304,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Slabo 27px"; }
+  font-family: "Slabo 27px", sans-serif; }
 
 h1 {
   font-size: 3.6rem; }
@@ -324,7 +324,7 @@ a {
   color: #18121e;
   letter-spacing: 1px; }
   a:hover {
-    color: #999;
+    color: #233237;
     text-decoration: none; }
 
 ul {
@@ -366,7 +366,27 @@ main {
   .main-nav .page_item {
     margin-right: 2rem; }
     .main-nav .page_item a {
-      color: #eac67a; }
+      display: block;
+      color: #eac67a;
+      padding: 4px 0;
+      position: relative;
+      overflow: hidden; }
+      .main-nav .page_item a:before, .main-nav .page_item a:after {
+        display: block;
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        border-top: 2px solid #984b43;
+        transition: transform 300ms ease-in-out; }
+      .main-nav .page_item a:before {
+        top: 0;
+        transform: translateX(-100%); }
+      .main-nav .page_item a:after {
+        bottom: 0;
+        transform: translateX(100%); }
+      .main-nav .page_item a:hover:before, .main-nav .page_item a:hover:after {
+        transform: translateX(0); }
 
 @media only screen and (min-width: 800px) {
   #menu-main-menu,
@@ -396,7 +416,7 @@ main {
   width: 54px;
   fill: #18121e; }
   .social-media svg:hover {
-    fill: #999; }
+    fill: #233237; }
 
 .button {
   background-color: #233237;
@@ -459,7 +479,7 @@ main {
     width: 95%; }
   .header-circle__text {
     font-size: 44px;
-    font-family: "Slabo 27px";
+    font-family: "Slabo 27px", sans-serif;
     color: #18121e; }
 
 .admin-bar .site-header {
@@ -487,10 +507,29 @@ footer {
 
 .home-about {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 3rem 0; }
   @media only screen and (min-width: 800px) {
     .home-about {
       flex-wrap: nowrap; } }
+  .home-about__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex: 0 0 40%;
+    padding: 2rem 4rem; }
+    @media only screen and (min-width: 800px) {
+      .home-about__left {
+        border-right: 2px solid #18121e; } }
+  .home-about__right {
+    display: flex;
+    align-items: center;
+    flex: 1 0 60%;
+    padding-left: 4rem; }
+  .home-about__title {
+    color: #984b43;
+    font: 3.6rem "Slabo 27px", sans-serif;
+    margin: 1rem 0 2rem; }
 
 .home-spaces-section {
   background-color: #233237; }

@@ -17,13 +17,31 @@
 .home-about {
   display: flex;
   flex-wrap: wrap;
+  padding: 3rem 0;
 
   @include bp(md) {
     flex-wrap: nowrap;
   }
   &__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex: 0 0 40%;
+    padding: 2rem 4rem;
+
+    @include bp(md) {
+      border-right: 2px solid $black;
+    }
   }
   &__right {
+    display: flex;
+    align-items: center;
+    flex: 1 0 60%;
+    padding-left: 4rem;
+  }
+  &__title {
+    @include header-two;
+    margin: 1rem 0 2rem;
   }
 }
 

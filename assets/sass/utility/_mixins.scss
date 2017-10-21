@@ -58,3 +58,8 @@ $brkpts: (
   }
   @return ($pxval / $base) * 1rem;
 }
+
+@mixin header-two {
+  color: $red;
+  font: 3.6rem $secondary-font;
+}
