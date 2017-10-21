@@ -100,6 +100,19 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
+.content-width {
+  max-width: 87rem;
+  padding: 2rem 1rem; }
+  @media only screen and (min-width: 480px) {
+    .content-width {
+      padding: 2rem; } }
+  @media only screen and (min-width: 960px) {
+    .content-width {
+      margin: 0 auto; } }
+  @media only screen and (min-width: 1020px) {
+    .content-width {
+      margin: 0 auto 0 12%; } }
+
 img {
   max-width: 100%; }
 
@@ -283,7 +296,7 @@ body {
   background-color: #f3efe8;
   font-family: "Open Sans";
   line-height: 1.6;
-  color: #111; }
+  color: #18121e; }
 
 h1,
 h2,
@@ -308,7 +321,7 @@ p {
 a {
   font-size: 1.8rem;
   text-decoration: none;
-  color: #111;
+  color: #18121e;
   letter-spacing: 1px; }
   a:hover {
     color: #999;
@@ -348,8 +361,12 @@ main {
 
 .main-nav {
   padding-right: 2rem; }
-  .main-nav .page_item a {
-    color: white; }
+  .main-nav__menu > ul {
+    display: flex; }
+  .main-nav .page_item {
+    margin-right: 2rem; }
+    .main-nav .page_item a {
+      color: #eac67a; }
 
 @media only screen and (min-width: 800px) {
   #menu-main-menu,
@@ -377,12 +394,23 @@ main {
 .social-media svg {
   height: 54px;
   width: 54px;
-  fill: #111; }
+  fill: #18121e; }
   .social-media svg:hover {
     fill: #999; }
 
+.button {
+  background-color: #233237;
+  padding: 12px 24px;
+  border-radius: 5px;
+  color: #eac67a;
+  font-size: 2rem;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out; }
+  .button:hover {
+    background-color: #374e56;
+    color: #f1d9a6; }
+
 .site-header {
-  background-color: #111;
+  background-color: #233237;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -393,7 +421,7 @@ main {
   width: 100%;
   transition: padding 300ms ease-in-out; }
   .site-header__title {
-    color: #f3efe8;
+    color: #eac67a;
     font-size: 2.6rem;
     letter-spacing: 11px;
     line-height: 1.2;
@@ -407,12 +435,12 @@ main {
       transform: scale(0.8); }
 
 .header-circle {
-  border: 2px solid #f3efe8;
+  border: 2px solid white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #111;
+  background-color: #984b43;
   position: absolute;
   top: 5px;
   transform: scale(1);
@@ -425,15 +453,20 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f3efe8;
-    border: 1px solid #111;
+    background-color: white;
     border-radius: 50%;
-    height: 90%;
-    width: 90%; }
+    height: 95%;
+    width: 95%; }
   .header-circle__text {
     font-size: 44px;
     font-family: "Slabo 27px";
-    color: black; }
+    color: #18121e; }
+
+.admin-bar .site-header {
+  top: 46px; }
+  @media only screen and (min-width: 782px) {
+    .admin-bar .site-header {
+      top: 32px; } }
 
 footer {
   margin: 30px 0; }
@@ -453,17 +486,16 @@ footer {
       height: 600px; } }
 
 .home-about {
-  max-width: 87rem;
-  padding: 2rem 1rem; }
-  @media only screen and (min-width: 480px) {
+  display: flex;
+  flex-wrap: wrap; }
+  @media only screen and (min-width: 800px) {
     .home-about {
-      padding: 2rem; } }
-  @media only screen and (min-width: 960px) {
-    .home-about {
-      margin: 0 auto; } }
-  @media only screen and (min-width: 1020px) {
-    .home-about {
-      margin: 0 auto 0 12%; } }
+      flex-wrap: nowrap; } }
+
+.home-spaces-section {
+  background-color: #233237; }
+  .home-spaces-section__title {
+    color: white; }
 
 .home-spaces {
   display: flex;
@@ -471,21 +503,37 @@ footer {
   @media only screen and (min-width: 960px) {
     .home-spaces {
       flex-direction: column;
-      height: 800px; } }
+      height: 600px; } }
 
 .home-space {
   background-size: cover;
   width: 100%; }
-  .home-space__image {
-    height: 300px; }
   @media only screen and (min-width: 960px) {
     .home-space {
-      height: 400px;
+      height: 300px;
       width: 38%; }
       .home-space:first-of-type {
-        height: 800px;
-        width: 62%; }
-        .home-space:first-of-type .home-space__image {
-          height: 600px; } }
+        height: 600px;
+        width: 62%; } }
+
+.home-history__image {
+  background-size: cover;
+  height: 100px; }
+  @media only screen and (min-width: 640px) {
+    .home-history__image {
+      height: 160px; } }
+  @media only screen and (min-width: 800px) {
+    .home-history__image {
+      height: 200px; } }
+
+.circles-section {
+  display: flex;
+  justify-content: space-around; }
+
+.home-circle {
+  height: 20rem;
+  width: 20rem;
+  border: 2px solid #18121e;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=app.css.map */

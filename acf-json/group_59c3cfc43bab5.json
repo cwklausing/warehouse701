@@ -46,6 +46,44 @@
             "maxlength": ""
         },
         {
+            "key": "field_59ea8b7b5a5c5",
+            "label": "About Button Text",
+            "name": "about_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ea8b965a5c6",
+            "label": "About Button Url",
+            "name": "about_button_url",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
             "key": "field_59c3cfe7a2af3",
             "label": "About Text",
             "name": "about_text",
@@ -61,7 +99,7 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 5,
             "new_lines": ""
         },
         {
@@ -171,6 +209,62 @@
                     "new_lines": ""
                 }
             ]
+        },
+        {
+            "key": "field_59e80759dbedc",
+            "label": "Circles",
+            "name": "circles",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_59e80767dbedd",
+            "min": 3,
+            "max": 3,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_59e80767dbedd",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_59e8076edbede",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -192,5 +286,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1506990415
+    "modified": 1508543598
 }

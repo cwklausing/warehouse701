@@ -5,7 +5,7 @@
 
 $menu_array = array(
   'menu'            => 'Main Menu',
-  'menu_class'      => '',
+  'menu_class'      => 'main-nav__menu',
   'container'       => false,
   'theme_location'  => 'main',
 );

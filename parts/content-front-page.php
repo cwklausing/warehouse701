@@ -13,5 +13,7 @@ $home_gallery = get_field( 'home_page_image' )['sizes']['large'];
 	<div class="home-content">
 		<?php get_template_part( 'parts/front-page', 'about' ); ?>
 		<?php get_template_part( 'parts/front-page', 'spaces' ); ?>
+		<?php get_template_part( 'parts/front-page', 'history'); ?>
+		<?php get_template_part( 'parts/front-page', 'circles' ); ?>
 	</div>
 </main>

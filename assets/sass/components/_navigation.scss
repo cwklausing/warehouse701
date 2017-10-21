@@ -1,8 +1,13 @@
 .main-nav {
   padding-right: 2rem;
+
+  &__menu > ul {
+    display: flex;
+  }
   .page_item {
+    margin-right: 2rem;
     a {
-      color: white;
+      color: $yellow;
     }
   }
 }
