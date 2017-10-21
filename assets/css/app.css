@@ -293,7 +293,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #f3efe8;
+  background-color: white;
   font-family: "Open Sans", serif;
   line-height: 1.6;
   color: #18121e; }
@@ -439,7 +439,8 @@ main {
   top: 0px;
   left: 0px;
   width: 100%;
-  transition: padding 300ms ease-in-out; }
+  transition: padding 300ms ease-in-out;
+  z-index: 10; }
   .site-header__title {
     color: #eac67a;
     font-size: 2.6rem;
@@ -494,7 +495,11 @@ footer {
 .home-hero {
   height: 300px;
   background-size: cover;
-  background-attachment: fixed; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; }
   @media only screen and (min-width: 640px) {
     .home-hero {
       height: 400px; } }
@@ -505,10 +510,25 @@ footer {
     .home-hero {
       height: 600px; } }
 
+.home-content {
+  margin-top: 300px;
+  position: relative; }
+  @media only screen and (min-width: 640px) {
+    .home-content {
+      margin-top: 400px; } }
+  @media only screen and (min-width: 800px) {
+    .home-content {
+      margin-top: 500px; } }
+  @media only screen and (min-width: 960px) {
+    .home-content {
+      margin-top: 600px; } }
+
 .home-about {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 3rem 0; }
+  background-color: rgba(216, 216, 216, 0.9); }
+  .home-about__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0; }
   @media only screen and (min-width: 800px) {
     .home-about {
       flex-wrap: nowrap; } }
@@ -555,19 +575,23 @@ footer {
         height: 600px;
         width: 62%; } }
 
-.home-history__image {
-  background-size: cover;
-  height: 100px; }
-  @media only screen and (min-width: 640px) {
-    .home-history__image {
-      height: 160px; } }
-  @media only screen and (min-width: 800px) {
-    .home-history__image {
-      height: 200px; } }
+.home-history {
+  background-color: white; }
+  .home-history__image {
+    background-size: cover;
+    height: 100px; }
+    @media only screen and (min-width: 640px) {
+      .home-history__image {
+        height: 160px; } }
+    @media only screen and (min-width: 800px) {
+      .home-history__image {
+        height: 200px; } }
 
 .circles-section {
-  display: flex;
-  justify-content: space-around; }
+  background-color: white; }
+  .circles-section__content {
+    display: flex;
+    justify-content: space-around; }
 
 .home-circle {
   height: 20rem;

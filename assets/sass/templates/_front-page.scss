@@ -1,7 +1,12 @@
 .home-hero {
+  // must match home-content margin-top!
   height: 300px;
   background-size: cover;
-  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
 
   @include bp(sm) {
     height: 400px;
@@ -14,10 +19,30 @@
   }
 }
 
+.home-content {
+  // must match home-hero height!
+  margin-top: 300px;
+
+  @include bp(sm) {
+    margin-top: 400px;
+  }
+  @include bp(md) {
+    margin-top: 500px;
+  }
+  @include bp(lg) {
+    margin-top: 600px;
+  }
+  position: relative;
+}
+
 .home-about {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 3rem 0;
+  background-color: $trans-tan;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+  }
 
   @include bp(md) {
     flex-wrap: nowrap;
@@ -77,6 +102,7 @@
 }
 
 .home-history {
+  background-color: white;
   &__image {
     background-size: cover;
     height: 100px;
@@ -91,8 +117,11 @@
 }
 
 .circles-section {
-  display: flex;
-  justify-content: space-around;
+  background-color: white;
+  &__content {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .home-circle {
