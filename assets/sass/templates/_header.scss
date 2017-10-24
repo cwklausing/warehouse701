@@ -63,7 +63,7 @@
 // Adjust for admin menu
 .admin-bar {
   .site-header {
-    top: 46px;
+    top: 0;
     @include bp(782px) {
       top: 32px;
     }

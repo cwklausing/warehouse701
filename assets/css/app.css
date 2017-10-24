@@ -484,7 +484,7 @@ main {
     color: #18121e; }
 
 .admin-bar .site-header {
-  top: 46px; }
+  top: 0; }
   @media only screen and (min-width: 782px) {
     .admin-bar .site-header {
       top: 32px; } }
@@ -551,29 +551,51 @@ footer {
     font: 3.6rem "Slabo 27px", sans-serif;
     margin: 1rem 0 2rem; }
 
-.home-spaces-section {
-  background-color: #233237; }
-  .home-spaces-section__title {
+.home-spaces {
+  background-color: white;
+  padding: 8rem 0; }
+  @media only screen and (min-width: 800px) {
+    .home-spaces {
+      padding: 8rem 2rem; } }
+  .home-spaces__title {
     color: white; }
 
-.home-spaces {
-  display: flex;
-  flex-wrap: wrap; }
-  @media only screen and (min-width: 960px) {
-    .home-spaces {
-      flex-direction: column;
-      height: 600px; } }
-
-.home-space {
-  background-size: cover;
+.home-space__image {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  overflow: hidden; }
+  @media only screen and (min-width: 800px) {
+    .home-space__image {
+      height: 416px;
+      width: 50%; } }
+.home-space__overlay {
+  background-color: rgba(35, 51, 58, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%; }
-  @media only screen and (min-width: 960px) {
-    .home-space {
-      height: 300px;
-      width: 38%; }
-      .home-space:first-of-type {
-        height: 600px;
-        width: 62%; } }
+.home-space__title {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  font-size: 3.6rem;
+  color: #eac67a;
+  border-bottom: 3px solid #984b43;
+  width: 80%;
+  margin: 0; }
+  @media only screen and (min-width: 800px) {
+    .home-space__title {
+      left: 50%; } }
+.home-space__text {
+  padding: 4rem 2rem; }
+.home-space__title-two {
+  margin: 0 0 1rem;
+  font-size: 2.4rem;
+  color: #984b43; }
+.home-space__description {
+  margin-bottom: 3rem; }
 
 .home-history {
   background-color: white; }
