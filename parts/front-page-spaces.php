@@ -5,7 +5,6 @@
 $spaces = get_field( 'featured_spaces' );
 $button_text = get_field( 'spaces_button_text' );
 ?>
-<!-- TODO: Add Slick Slider for spaces -->
 <div class="home-spaces">
   <?php foreach ( $spaces as $space ) :
     $space_obj = $space['featured_space'];
@@ -16,15 +15,17 @@ $button_text = get_field( 'spaces_button_text' );
     $gallery = get_field( 'picture_gallery' );
     $pic = $gallery[0]['sizes']['medium_large'];
     ?>
-    <div class="home-space">
-      <div class="home-space__image" style="background-image:url('<?php echo esc_url( $pic ); ?>')">
-        <div class="home-space__overlay"></div>
-        <h3 class="home-space__title"><?php echo esc_html( $title ); ?></h3>
-      </div>
-      <div class="home-space__text">
-        <h4 class="home-space__title-two"><?php echo esc_html( $title ); ?></h4>
-        <p class="home-space__description"><?php echo esc_html( $description ); ?></p>
-        <a href="#" class="home-space__button button"><?php echo esc_html( $button_text ); ?></a>
+    <div class="home-space__wrap">
+      <div class="home-space">
+        <div class="home-space__image" style="background-image:url('<?php echo esc_url( $pic ); ?>')">
+          <div class="home-space__overlay"></div>
+          <h3 class="home-space__title"><?php echo esc_html( $title ); ?></h3>
+        </div>
+        <div class="home-space__text">
+          <h4 class="home-space__title-two"><?php echo esc_html( $title ); ?></h4>
+          <p class="home-space__description"><?php echo esc_html( $description ); ?></p>
+          <a href="#" class="home-space__button button"><?php echo esc_html( $button_text ); ?></a>
+        </div>
       </div>
     </div>
   <?php 

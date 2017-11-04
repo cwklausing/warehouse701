@@ -424,10 +424,45 @@ main {
   border-radius: 5px;
   color: #eac67a;
   font-size: 2rem;
+  text-align: center;
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out; }
   .button:hover {
     background-color: #374e56;
     color: #f1d9a6; }
+
+.slick-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: transform 400ms ease-in-out;
+  width: 10%;
+  z-index: 2; }
+  @media only screen and (min-width: 800px) {
+    .slick-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  .slick-nav:hover {
+    cursor: pointer; }
+  .slick-nav span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black; }
+  .slick-nav__prev {
+    left: 0; }
+    .slick-nav__prev.slick-disabled {
+      transform: translateX(-100%); }
+    .slick-nav__prev span {
+      transform: rotate(135deg); }
+  .slick-nav__next {
+    right: 0; }
+    .slick-nav__next.slick-disabled {
+      transform: translateX(100%); }
+    .slick-nav__next span {
+      transform: rotate(-45deg); }
 
 .site-header {
   background-color: #233237;
@@ -560,6 +595,10 @@ footer {
   .home-spaces__title {
     color: white; }
 
+@media only screen and (min-width: 800px) {
+  .home-space {
+    display: flex;
+    margin-left: 10%; } }
 .home-space__image {
   position: relative;
   height: 220px;
@@ -568,7 +607,8 @@ footer {
   @media only screen and (min-width: 800px) {
     .home-space__image {
       height: 416px;
-      width: 50%; } }
+      width: 50%;
+      overflow: visible; } }
 .home-space__overlay {
   background-color: rgba(35, 51, 58, 0.8);
   position: absolute;
@@ -613,12 +653,109 @@ footer {
   background-color: white; }
   .circles-section__content {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 800px) {
+      .circles-section__content {
+        flex-wrap: nowrap; } }
 
 .home-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 20rem;
   width: 20rem;
-  border: 2px solid #18121e;
-  border-radius: 50%; }
+  border: 2rem solid #233237;
+  border-radius: 50%;
+  margin-bottom: 3rem; }
+  .home-circle__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #233237;
+    border-radius: 50%;
+    margin: 1rem;
+    width: 100%;
+    height: 100%; }
+  .home-circle__text {
+    font-size: 2.4rem;
+    color: #984b43;
+    padding: 0 2rem;
+    text-align: center; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */

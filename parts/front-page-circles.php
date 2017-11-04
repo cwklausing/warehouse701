@@ -13,7 +13,11 @@ $circles = get_field( 'circles' );
       $link = $circle['link'];
       ?>
       <a href="<?php echo esc_url( $link ); ?>" class="home-circle">
-        <?php echo esc_html( $text ); ?>
+        <div class="home-circle__inner">
+          <span class="home-circle__text">
+            <?php echo esc_html( $text ); ?>
+          </span>
+        </div>
       </a>
     <?php endforeach; ?>
   </div>
