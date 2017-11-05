@@ -1,0 +1,109 @@
+/* 	Contains styling for mobile menu container, 
+	NOT styling for the actual menu items. See navigation.scss */
+
+.main-nav {
+  background-color: white;
+  box-shadow: 0px -5px 14px 5px #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 8rem 2rem 2rem;
+  position: fixed;
+  transform: translateY(-100vh);
+  width: 100%;
+  z-index: 1;
+  transition: transform 400ms ease-out;
+
+  @include bp(md) {
+    background-color: transparent;
+    box-shadow: none;
+    display: block;
+    height: auto;
+    width: auto;
+    padding: 0;
+    position: static;
+    transform: none;
+
+    & > div {
+      height: 100%;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+}
+
+.mobile-menu-button {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  z-index: 2;
+  width: 3rem;
+  height: 2.6rem;
+  transition: top 300ms ease-in-out;
+
+  @include bp(md) {
+    display: none;
+  }
+
+  .top,
+  .middle,
+  .bottom {
+    border-bottom: 4px solid $yellow;
+    position: absolute;
+    top: 1.1rem;
+    width: 100%;
+    transition: transform 300ms ease-in-out;
+  }
+  .top {
+    transform: translateY(-1.1rem);
+  }
+  .middle {
+    transform: translateY(0rem);
+    transition: opacity 300ms ease-out, transform 300ms ease-in-out;
+  }
+  .bottom {
+    transform: translateY(1.1rem);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mobile-menu-open {
+  .main-nav {
+    transform: translateY(0vh);
+    transition: transform 400ms ease-out;
+  }
+  .mobile-menu-button {
+    .top {
+      transform: translateY(0) rotate(45deg);
+    }
+    .middle {
+      transform: translateY(0) rotate(360deg);
+      opacity: 0;
+    }
+    .bottom {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+}
+
+.header-shrink {
+  .mobile-menu-button {
+    top: 1.7rem;
+  }
+}
+
+// Prevent body overflow on mobile menu open
+body.mobile-menu-open {
+  overflow: hidden;
+}

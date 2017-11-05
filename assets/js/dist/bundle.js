@@ -587,11 +587,38 @@
 
     _public.init = function () {
       $('.home-spaces').slick({
-        dots: true,
+        arrows: false,
+        cssEase: 'cubic-bezier(.12,.62,.33,.98)',
+        dots: false,
         infinite: false,
         prevArrow: '<div class="slick-nav slick-nav__prev"><span></span></div>',
-        nextArrow: '<div class="slick-nav slick-nav__next"><span></span></div>'
+        nextArrow: '<div class="slick-nav slick-nav__next"><span></span></div>',
+        mobileFirst: true,
+        responsive: [{
+          breakpoint: 800,
+          settings: {
+            dots: true,
+            arrows: true
+          }
+        }]
       });
+    };
+
+    return _public;
+  }(jQuery);
+
+  var HomeSpaces = function ($) {
+    var $spaceImage = $('.home-space__overlay');
+
+    function spaceHover(event) {
+      var $homeSpace = $(this).closest('.home-space');
+      $homeSpace.toggleClass('hover');
+    }
+
+    var _public = {};
+
+    _public.init = function () {
+      $spaceImage.on('hover', spaceHover);
     };
 
     return _public;
@@ -600,5 +627,6 @@
   MobileMenu.init();
   ShrinkHeader.init();
   slickSlider.init();
+  HomeSpaces.init();
 
 }());

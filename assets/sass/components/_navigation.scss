@@ -1,23 +1,25 @@
 .main-nav {
   padding-right: 2rem;
 
-  &__menu > ul {
-    display: flex;
-  }
   .page_item {
     margin-right: 2rem;
     a {
       display: block;
-      color: $yellow;
+      color: $black;
       padding: 4px 0;
       position: relative;
       // Prevent before/after lines from being seen outside box.
       overflow: hidden;
+
+      @include bp(md) {
+        color: $yellow;
+      }
+
       // On hover, lines fly in from left and right
       &:before,
       &:after {
         display: block;
-        content: "";
+        content: '';
         width: 100%;
         position: absolute;
         left: 0;

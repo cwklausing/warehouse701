@@ -33,6 +33,11 @@ $bubble_text = get_field( 'bubble_text', 'option' );
     <a href="<?php bloginfo( 'url' ); ?>" class="site-header__link">
       <h1 class="site-header__title"><?php bloginfo( 'name' ); ?></h1>
     </a>
+    <div class="mobile-menu-button">
+      <div class="top"></div>
+      <div class="middle"></div>
+      <div class="bottom"></div>
+    </div>
     <nav class="main-nav">
       <?php wp_nav_menu( $menu_array ); ?>
     </nav>

@@ -73,6 +73,7 @@
 .home-spaces {
   background-color: white;
   padding: 8rem 0;
+  overflow: hidden;
 
   @include bp(md) {
     padding: 8rem 2rem;
@@ -87,7 +88,15 @@
     display: flex;
     margin-left: 10%;
   }
+  &.hover {
+    .home-space__title {
+      opacity: 1;
+      transform: translateX(-69%) translateY(-60%);
+    }
+  }
   &__image {
+    background-size: cover;
+    flex: 0 0 auto;
     position: relative;
     height: 220px;
     width: 100%;
@@ -100,29 +109,26 @@
     }
   }
   &__overlay {
+    display: none;
     background-color: $trans-gray;
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-  }
-  &__title {
-    position: absolute;
-    left: 30%;
-    top: 50%;
-    font-size: 3.6rem;
-    color: $yellow;
-    border-bottom: 3px solid $red;
-    width: 80%;
-    margin: 0;
-
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
     @include bp(md) {
-      left: 50%;
+      display: block;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   &__text {
-    padding: 4rem 2rem;
+    flex-grow: 1;
+    padding: 4rem 2rem 4rem 3rem;
   }
   &__title-two {
     margin: 0 0 1rem;
@@ -132,19 +138,39 @@
   &__description {
     margin-bottom: 3rem;
   }
-}
-
-.home-history {
-  background-color: white;
-  &__image {
-    background-size: cover;
-    height: 100px;
-
-    @include bp(sm) {
-      height: 160px;
+  &__title {
+    position: relative;
+    height: 5rem;
+    width: 69%;
+    margin: 0;
+    transform: translateX(-59%) translateY(-60%);
+    opacity: 0;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    &__text {
+      border-bottom: 3px solid #984b43;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      font-size: 3.6rem;
+      color: $yellow;
+      line-height: 1.3;
+      transform: translateX(-16rem);
+      margin-right: 3rem;
     }
+    &__underline {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 19rem;
+      border-bottom: 3px solid $red;
+    }
+  }
+  &__swipe-text {
+    margin: 0;
     @include bp(md) {
-      height: 200px;
+      display: none;
     }
   }
 }
@@ -168,18 +194,17 @@
   justify-content: center;
   height: 20rem;
   width: 20rem;
-  border: 2rem solid $blue;
+  border: 12px solid $blue;
   border-radius: 50%;
   margin-bottom: 3rem;
   &__inner {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid $blue;
+    border: 5px solid $blue;
     border-radius: 50%;
-    margin: 1rem;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
   }
   &__text {
     font-size: 2.4rem;

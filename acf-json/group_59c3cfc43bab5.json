@@ -122,6 +122,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_59ff68c1b6e23",
+            "label": "Mobile Swipe Text",
+            "name": "mobile_swipe_text",
+            "type": "text",
+            "instructions": "This text will appear on mobile only to inform people to swipe to see more spaces.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Swipe to see more",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59d1a667dc68f",
             "label": "Featured Spaces",
             "name": "featured_spaces",
@@ -286,5 +305,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1508809821
+    "modified": 1509911072
 }

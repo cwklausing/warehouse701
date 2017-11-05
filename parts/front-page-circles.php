@@ -6,7 +6,7 @@
 $circles = get_field( 'circles' );
 ?>
 
-<div class="circles-section content-width">
+<div class="circles-section">
   <div class="circles-section__content">
     <?php foreach( $circles as $circle ) : 
       $text = $circle['text'];
