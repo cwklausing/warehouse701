@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
   background-color: $blue;
@@ -7,14 +8,22 @@
 
   &__contact {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    @include bp(md) {
+      flex-wrap: nowrap;
+    }
   }
   &__email,
   &__phone {
     color: $yellow;
     font-size: 2.4rem;
-    margin-left: 4rem;
+
+    @include bp(md) {
+      margin-left: 4rem;
+    }
   }
   &__email {
     transition: color 300ms ease-in-out;
