@@ -29,6 +29,29 @@
     cursor: pointer;
   }
 
+  .slick-circle {
+    background-color: $trans-gray-light;
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 250ms ease-in-out;
+
+    span {
+      transform: translateX(-8px) rotate(-45deg);
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 250ms cubic-bezier(0.26, 0.66, 0.28, 1.92);
+    }
+  }
+  &__prev .slick-circle span {
+    transform: translateX(8px) rotate(135deg);
+  }
+
   span {
     display: block;
     width: 40px;

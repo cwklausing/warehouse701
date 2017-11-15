@@ -72,7 +72,7 @@
 
 .home-spaces {
   background-color: white;
-  padding: 8rem 0;
+  padding: 8rem 0 2rem;
   overflow: hidden;
 
   @include bp(md) {
@@ -95,6 +95,7 @@
     }
   }
   &__image {
+    display: block;
     background-size: cover;
     flex: 0 0 auto;
     position: relative;
@@ -138,6 +139,10 @@
   &__description {
     margin-bottom: 3rem;
   }
+  &__button {
+    position: relative;
+    z-index: 1;
+  }
   &__title {
     position: relative;
     height: 5rem;
@@ -146,6 +151,7 @@
     transform: translateX(-59%) translateY(-60%);
     opacity: 0;
     transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    z-index: 0;
     &__text {
       border-bottom: 3px solid #984b43;
       position: absolute;
@@ -177,6 +183,11 @@
 
 .circles-section {
   background-color: white;
+  padding-bottom: 4rem;
+
+  @include bp(md) {
+    padding-bottom: 8rem;
+  }
   &__content {
     display: flex;
     justify-content: space-around;
@@ -185,31 +196,5 @@
     @include bp(md) {
       flex-wrap: nowrap;
     }
-  }
-}
-
-.home-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20rem;
-  width: 20rem;
-  border: 12px solid $blue;
-  border-radius: 50%;
-  margin-bottom: 3rem;
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid $blue;
-    border-radius: 50%;
-    width: 95%;
-    height: 95%;
-  }
-  &__text {
-    font-size: 2.4rem;
-    color: $red;
-    padding: 0 2rem;
-    text-align: center;
   }
 }

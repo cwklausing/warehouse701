@@ -1,0 +1,44 @@
+.single-space {
+  &__gallery {
+    .slick-track {
+      height: 300px;
+
+      @include bp(sm) {
+        height: 400px;
+      }
+      @include bp(md) {
+        height: 500px;
+      }
+    }
+  }
+  &__image {
+    background-size: cover;
+  }
+  &__bottom {
+    background-color: white;
+    padding: 4rem 2rem;
+
+    @include bp(md) {
+      padding: 4rem 4rem 4rem 10rem;
+    }
+  }
+  &__card {
+    position: relative;
+    background-color: $trans-gray;
+    padding: 2rem;
+    margin-top: -13rem;
+    width: 100%;
+
+    @include bp(md) {
+      padding: 2rem 6rem;
+      width: 60rem;
+    }
+    @include bp(lg) {
+      padding: 2rem 10rem;
+      width: 80rem;
+    }
+  }
+  &__name {
+    @include header-two;
+  }
+}

@@ -1,12 +1,12 @@
 {
-    "key": "group_59d1a5052d0e7",
-    "title": "Spaces",
+    "key": "group_5a03580c88d87",
+    "title": "Space Gallery",
     "fields": [
         {
-            "key": "field_59d1a5540dfcd",
-            "label": "Picture Gallery",
-            "name": "picture_gallery",
-            "type": "gallery",
+            "key": "field_5a03581c86882",
+            "label": "Hero Image",
+            "name": "hero_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,9 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "min": "",
-            "max": "",
-            "insert": "append",
+            "return_format": "array",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -31,9 +30,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "warehouse-spaces"
+                "value": "templates\/spaces-gallery.php"
             }
         ]
     ],
@@ -43,9 +42,9 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "excerpt"
+        "the_content"
     ],
     "active": 1,
     "description": "",
-    "modified": 1510600698
+    "modified": 1510168770
 }

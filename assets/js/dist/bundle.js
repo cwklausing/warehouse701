@@ -602,6 +602,22 @@
           }
         }]
       });
+
+      $('.single-space__gallery').slick({
+        arrows: false,
+        cssEase: 'cubic-bezier(.12,.62,.33,.98)',
+        dots: false,
+        infinite: false,
+        prevArrow: '<div class="slick-nav slick-nav__prev"><div class="slick-circle"><span></span></div></div>',
+        nextArrow: '<div class="slick-nav slick-nav__next"><div class="slick-circle"><span></span></div></div>',
+        mobileFirst: true,
+        responsive: [{
+          breakpoint: 800,
+          settings: {
+            arrows: true
+          }
+        }]
+      });
     };
 
     return _public;

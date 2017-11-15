@@ -3,33 +3,21 @@
  * Template for the Footer
  */
 
-$menu_array = array(
-  'menu'            => 'Footer Menu',
-  'menu_class'      => '',
-  'container'       => false,
-  'theme_location'  => 'secondary',
-)
-
+$phone = get_field( 'phone_number', 'option' );
+$email = get_field( 'email_address', 'option' );
+$bubble_text = get_field( 'bubble_text', 'option' );
 ?>
 
 <footer class="footer">
-  <div class="social-media footer-section">
-    <a href="<?php echo esc_url( $facebook_link ); ?>" target="_blank">
-      <svg aria-labelledby="icon-facebook" class="social-media__icon">
-        <use xlink:href="#icon-facebook"></use>
-      </svg>
-    </a>
-    <a href="<?php echo esc_url( $instagram_link ); ?>" target="_blank">
-      <svg aria-labelledby="icon-instagram" class="social-media__icon">
-        <use xlink:href="#icon-instagram"></use>
-      </svg>
-    </a>
-  </div>
-
-  <nav class="footer-section">
-    <?php wp_nav_menu( $menu_array ); ?>
-  </nav>
-
+    <div class="logo-circle logo-circle__footer">
+      <a href="<?php echo home_url(); ?>" class="logo-circle__inner">
+        <span class="logo-circle__text"><?php echo esc_html($bubble_text); ?></span>
+      </a>
+    </div>
+    <div class="footer__contact">
+      <span class="footer__phone"><?php echo esc_html($phone); ?></span>
+      <a href="#" class="footer__email"><?php echo esc_html($email); ?></a>
+    </div>
   <?php wp_footer(); ?>
 </footer>
 

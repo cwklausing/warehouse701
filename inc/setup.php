@@ -11,6 +11,10 @@ if ( ! function_exists( sbconnor_setup ) ) {
 	// Add post thumbnail support.
 	add_theme_support( 'post-thumbnails' );
 
+	// Extra image sizes
+	add_image_size( 'xl', 1200, 9999 );
+	add_image_size( 'xxl', 2000, 9999 );
+
 	// HTML5 support
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 

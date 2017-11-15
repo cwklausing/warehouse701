@@ -12,9 +12,9 @@ $circles = get_field( 'circles' );
       $text = $circle['text'];
       $link = $circle['link'];
       ?>
-      <a href="<?php echo esc_url( $link ); ?>" class="home-circle">
-        <div class="home-circle__inner">
-          <span class="home-circle__text">
+      <a href="<?php echo esc_url( $link ); ?>" class="wh-circle">
+        <div class="wh-circle__inner">
+          <span class="wh-circle__text">
             <?php echo esc_html( $text ); ?>
           </span>
         </div>

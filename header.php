@@ -25,9 +25,9 @@ $bubble_text = get_field( 'bubble_text', 'option' );
 
 <body <?php body_class(); ?> >
   <header class="site-header">
-    <div class="header-circle">
-      <a href="<?php echo home_url(); ?>" class="header-circle__inner">
-        <span class="header-circle__text"><?php echo esc_html($bubble_text); ?></span>
+    <div class="logo-circle">
+      <a href="<?php echo home_url(); ?>" class="logo-circle__inner">
+        <span class="logo-circle__text"><?php echo esc_html($bubble_text); ?></span>
       </a>
     </div>
     <a href="<?php bloginfo( 'url' ); ?>" class="site-header__link">

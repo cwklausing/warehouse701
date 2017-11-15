@@ -25,7 +25,7 @@ function custom_post_type() {
 // Set other options for Custom Post Type
      
     $args = array(
-        'label'               => __( 'spaces', 'wh701' ),
+        'label'               => __( 'warehouse-spaces', 'wh701' ),
         'description'         => __( 'Space news and reviews', 'wh701' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
@@ -39,14 +39,14 @@ function custom_post_type() {
         'menu_position'       => 5,
         'menu_icon'           => 'dashicons-admin-multisite',
         'can_export'          => true,
-        'has_archive'         => true,
+        'has_archive'         => false,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
     );
      
     // Registering your Custom Post Type
-    register_post_type( 'spaces', $args );
+    register_post_type( 'warehouse-spaces', $args );
  
 }
 

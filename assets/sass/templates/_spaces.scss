@@ -1,0 +1,84 @@
+.spaces {
+  &__hero {
+    background-size: cover;
+    margin-top: 70px;
+    height: 300px;
+
+    @include bp(md) {
+      height: 400px;
+    }
+    @include bp(lg) {
+      height: 500px;
+    }
+  }
+
+  &__title {
+    @include header-two;
+    background-color: $gray-light;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+
+    @include bp(md) {
+      padding: 3rem;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 3rem 1rem;
+
+    @include bp(sm) {
+      padding: 4rem;
+    }
+    @include bp(md) {
+      padding: 5rem 8rem;
+    }
+  }
+}
+
+.space {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+
+  @include bp(sm) {
+    width: 50%;
+    padding: 2rem;
+  }
+  @include bp(md) {
+    width: calc(100%/3);
+  }
+
+  &__name {
+    @include header-two;
+    text-align: center;
+  }
+
+  .wh-circle {
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+
+    @include bp(sm) {
+      width: 80%;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &__inner {
+      background-size: cover;
+      position: absolute;
+      top: 2.5%;
+      left: 2.5%;
+    }
+  }
+}
