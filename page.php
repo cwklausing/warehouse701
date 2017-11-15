@@ -1,6 +1,6 @@
 <?php
 /**
- * Page template
+ * Default Page template
  *
  * @package wh701
  */

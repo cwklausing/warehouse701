@@ -1,4 +1,12 @@
 .single-space {
+  &__header {
+    background-color: white;
+    padding: 1rem;
+  }
+  &__title {
+    @include header-two;
+    text-align: center;
+  }
   &__gallery {
     .slick-track {
       height: 300px;

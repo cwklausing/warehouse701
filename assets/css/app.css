@@ -356,8 +356,8 @@ nav,
 main {
   box-sizing: border-box; }
 
-#wpadminbar {
-  top: 0; }
+.primary {
+  margin-top: 71px; }
 
 .main-nav {
   padding-right: 2rem; }
@@ -449,7 +449,7 @@ main {
   .slick-nav:hover {
     cursor: pointer; }
   .slick-nav .slick-circle {
-    background-color: rgba(250, 250, 250, 0.2);
+    background-color: rgba(250, 250, 250, 0.5);
     width: 85px;
     height: 85px;
     display: flex;
@@ -821,7 +821,7 @@ body.mobile-menu-open {
       overflow: visible; } }
 .home-space__overlay {
   display: none;
-  background-color: rgba(200, 200, 200, 0.8);
+  background-color: rgba(35, 51, 58, 0.8);
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -960,6 +960,13 @@ body.mobile-menu-open {
       top: 2.5%;
       left: 2.5%; }
 
+.single-space__header {
+  background-color: white;
+  padding: 1rem; }
+.single-space__title {
+  color: #984b43;
+  font: 3.6rem "Slabo 27px", sans-serif;
+  text-align: center; }
 .single-space__gallery .slick-track {
   height: 300px; }
   @media only screen and (min-width: 640px) {
