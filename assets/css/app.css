@@ -1028,6 +1028,37 @@ body.mobile-menu-open {
   color: #984b43;
   font: 3.6rem "Slabo 27px", sans-serif; }
 
+.contact__hero {
+  position: relative;
+  height: 200px; }
+  @media only screen and (min-width: 640px) {
+    .contact__hero {
+      height: 300px; } }
+  @media only screen and (min-width: 800px) {
+    .contact__hero {
+      height: 400px; } }
+  @media only screen and (min-width: 960px) {
+    .contact__hero {
+      height: 500px; } }
+.contact__card {
+  background-color: rgba(250, 250, 250, 0.5);
+  top: 50%;
+  padding: 1rem;
+  margin: 1rem; }
+  @media only screen and (min-width: 640px) {
+    .contact__card {
+      padding: 2rem;
+      margin: 2rem; } }
+  @media only screen and (min-width: 800px) {
+    .contact__card {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      width: 50%; } }
+.contact__title {
+  color: #984b43;
+  font: 3.6rem "Slabo 27px", sans-serif; }
+
 /* Slider */
 .slick-slider {
   position: relative;

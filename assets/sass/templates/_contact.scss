@@ -1,0 +1,36 @@
+.contact {
+  &__hero {
+    position: relative;
+    height: 200px;
+
+    @include bp(sm) {
+      height: 300px;
+    }
+    @include bp(md) {
+      height: 400px;
+    }
+    @include bp(lg) {
+      height: 500px;
+    }
+  }
+  &__card {
+    background-color: $trans-gray-light-two;
+    top: 50%;
+    padding: 1rem;
+    margin: 1rem;
+
+    @include bp(sm) {
+      padding: 2rem;
+      margin: 2rem;
+    }
+    @include bp(md) {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      width: 50%;
+    }
+  }
+  &__title {
+    @include header-two;
+  }
+}
