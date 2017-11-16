@@ -13,7 +13,9 @@ $hero_image = get_field( 'hero_image' )['sizes']['xxl'];
 <div class="spaces">
   <div class="spaces__hero" style="background-image:url('<?php echo esc_url( $hero_image ); ?>')">
   </div>
-  <h1 class="spaces__title"><?php the_title(); ?></h1>
+  <header class="spaces__header gray-header">
+    <h1 class="spaces__title gray-header__title"><?php the_title(); ?></h1>
+  </header>
   
   <?php if( $spaces_query->have_posts() ) : ?>
 

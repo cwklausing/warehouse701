@@ -13,15 +13,7 @@
   }
 
   &__title {
-    @include header-two;
-    background-color: $gray-light;
     text-align: center;
-    padding: 2rem;
-    margin: 0;
-
-    @include bp(md) {
-      padding: 3rem;
-    }
   }
 
   &__gallery {

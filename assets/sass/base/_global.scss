@@ -17,3 +17,16 @@ main {
 .primary {
   margin-top: 71px;
 }
+
+.gray-header {
+  background-color: $gray-light;
+  padding: 2rem 0;
+  @include bp(md) {
+    padding: 3rem 0;
+  }
+  &__title {
+    @include header-two;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

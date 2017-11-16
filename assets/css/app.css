@@ -17,12 +17,20 @@ div.aligncenter {
   margin: 5px auto 5px auto; }
 
 .alignright {
-  float: right;
-  margin: 5px 0 20px 20px; }
+  width: 100%; }
+  @media only screen and (min-width: 640px) {
+    .alignright {
+      float: right;
+      margin: 5px -40px 20px 20px;
+      width: auto; } }
 
 .alignleft {
-  float: left;
-  margin: 5px 20px 20px 0; }
+  width: 100%; }
+  @media only screen and (min-width: 640px) {
+    .alignleft {
+      float: left;
+      margin: 5px 20px 20px -40px;
+      width: auto; } }
 
 a img.alignright {
   float: right;
@@ -102,10 +110,10 @@ a img.aligncenter {
 
 .content-width {
   max-width: 87rem;
-  padding: 2rem 1rem; }
+  padding: 0 1rem; }
   @media only screen and (min-width: 480px) {
     .content-width {
-      padding: 2rem; } }
+      padding: 0 2rem; } }
   @media only screen and (min-width: 960px) {
     .content-width {
       margin: 0 auto; } }
@@ -115,6 +123,9 @@ a img.aligncenter {
 
 img {
   max-width: 100%; }
+  @media only screen and (max-width: 640px) {
+    img {
+      width: 100%; } }
 
 /**
  * Taken from: Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -358,6 +369,18 @@ main {
 
 .primary {
   margin-top: 71px; }
+
+.gray-header {
+  background-color: #ccc;
+  padding: 2rem 0; }
+  @media only screen and (min-width: 800px) {
+    .gray-header {
+      padding: 3rem 0; } }
+  .gray-header__title {
+    color: #984b43;
+    font: 3.6rem "Slabo 27px", sans-serif;
+    margin-top: 0;
+    margin-bottom: 0; }
 
 .main-nav {
   padding-right: 2rem; }
@@ -625,6 +648,18 @@ body.mobile-menu-open {
     color: #984b43;
     padding: 0 2rem;
     text-align: center; }
+
+.entry__hero {
+  background-size: cover;
+  height: 200px; }
+  @media only screen and (min-width: 640px) {
+    .entry__hero {
+      height: 300px; } }
+  @media only screen and (min-width: 800px) {
+    .entry__hero {
+      height: 400px; } }
+.entry__header {
+  background-color: rgba(200, 200, 200, 0.8); }
 
 .site-header {
   background-color: #233237;
@@ -905,15 +940,7 @@ body.mobile-menu-open {
     .spaces__hero {
       height: 500px; } }
 .spaces__title {
-  color: #984b43;
-  font: 3.6rem "Slabo 27px", sans-serif;
-  background-color: #ccc;
-  text-align: center;
-  padding: 2rem;
-  margin: 0; }
-  @media only screen and (min-width: 800px) {
-    .spaces__title {
-      padding: 3rem; } }
+  text-align: center; }
 .spaces__gallery {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,15 @@
+.entry {
+  &__hero {
+    background-size: cover;
+    height: 200px;
+    @include bp(sm) {
+      height: 300px;
+    }
+    @include bp(md) {
+      height: 400px;
+    }
+  }
+  &__header {
+    background-color: $trans-gray;
+  }
+}

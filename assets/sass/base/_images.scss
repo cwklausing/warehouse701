@@ -1,3 +1,7 @@
 img {
-	max-width: 100%;
+  max-width: 100%;
+
+  @include bp(sm, max) {
+    width: 100%;
+  }
 }

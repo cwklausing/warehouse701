@@ -11,13 +11,22 @@ div.aligncenter {
 }
 
 .alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
+  width: 100%;
+  @include bp(sm) {
+    float: right;
+    margin: 5px -40px 20px 20px;
+    width: auto;
+  }
 }
 
 .alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
+  width: 100%;
+
+  @include bp(sm) {
+    float: left;
+    margin: 5px 20px 20px -40px;
+    width: auto;
+  }
 }
 
 a img.alignright {
@@ -108,10 +117,10 @@ a img.aligncenter {
 
 .content-width {
   max-width: 87rem;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
 
   @include bp(xs) {
-    padding: 2rem;
+    padding: 0 2rem;
   }
   @include bp(lg) {
     margin: 0 auto;
