@@ -2,7 +2,7 @@
 /**
  * Default Content
  *
- * @package wh701;
+ * @package painters_bld;
  */
 
 $hero = get_field( 'hero_image' )['sizes']['xl'];

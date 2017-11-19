@@ -1,10 +1,14 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   background-color: $blue;
   padding: 1rem 2rem;
+
+  @include bp(md) {
+    justify-content: space-between;
+  }
 
   &__contact {
     display: flex;
@@ -18,8 +22,11 @@
   }
   &__email,
   &__phone {
+    display: block;
+    width: 100%;
     color: $yellow;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    text-align: center;
 
     @include bp(md) {
       margin-left: 4rem;

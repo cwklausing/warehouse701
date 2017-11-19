@@ -4,10 +4,9 @@
  */
 
 $menu_array = array(
-  'menu'            => 'Main Menu',
   'menu_class'      => 'main-nav__menu',
   'container'       => false,
-  'theme_location'  => 'main',
+  'theme_location'  => 'primary',
 );
 $bubble_text = get_field( 'bubble_text', 'option' );
 ?>

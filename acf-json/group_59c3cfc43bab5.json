@@ -271,7 +271,7 @@
                     "key": "field_59e8076edbede",
                     "label": "Link",
                     "name": "link",
-                    "type": "url",
+                    "type": "page_link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -280,8 +280,13 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": ""
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
                 }
             ]
         }
@@ -305,5 +310,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1510667811
+    "modified": 1510985868
 }

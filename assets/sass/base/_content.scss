@@ -14,8 +14,11 @@ div.aligncenter {
   width: 100%;
   @include bp(sm) {
     float: right;
-    margin: 5px -40px 20px 20px;
+    margin: 5px 0 20px 20px;
     width: auto;
+  }
+  @include bp(md) {
+    margin: 5px -2rem 20px 20px;
   }
 }
 
@@ -24,8 +27,11 @@ div.aligncenter {
 
   @include bp(sm) {
     float: left;
-    margin: 5px 20px 20px -40px;
+    margin: 5px 20px 20px 0;
     width: auto;
+  }
+  @include bp(md) {
+    margin: 5px 20px 20px -2rem;
   }
 }
 

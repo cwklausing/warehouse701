@@ -2,7 +2,7 @@
 /**
  * Template Name: Spaces Gallery
  * 
- * @package wh701
+ * @package painters_bld
  */
 
 get_header();

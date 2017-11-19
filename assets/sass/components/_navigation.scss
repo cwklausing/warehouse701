@@ -1,7 +1,7 @@
 .main-nav {
   padding-right: 2rem;
 
-  .page_item {
+  .menu-item {
     margin-right: 2rem;
     a {
       display: block;
@@ -11,7 +11,7 @@
       // Prevent before/after lines from being seen outside box.
       overflow: hidden;
 
-      @include bp(md) {
+      @include bp($mobile-menu-bp) {
         color: $yellow;
       }
 
@@ -29,11 +29,11 @@
 
       &:before {
         top: 0;
-        transform: translateX(-100%);
+        transform: translateX(-101%);
       }
       &:after {
         bottom: 0;
-        transform: translateX(100%);
+        transform: translateX(101%);
       }
 
       &:hover {
@@ -60,7 +60,7 @@
 }
 
 #menu-main-menu {
-  @include bp(md) {
+  @include bp($mobile-menu-bp) {
     margin: 20px 10%;
   }
 }
@@ -68,7 +68,7 @@
 .menu-item {
   width: 100%;
   margin: 10px 0;
-  @include bp(md) {
+  @include bp($mobile-menu-bp) {
     width: auto;
     margin: 0;
   }

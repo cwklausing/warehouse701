@@ -22,13 +22,16 @@ get_header();
 
 		<div class="contact__hero" style="background-image:url('<?php echo esc_url( $hero ); ?>')">
       <div class="contact__card">
-        <h2 class="contact__title"><?php echo esc_html( $card_title ); ?></h2>
+        <h2 class="contact__card-title"><?php echo esc_html( $card_title ); ?></h2>
         <div class="card__text">
           <?php the_field( 'header_card_text'); ?>
         </div>
       </div>
     </div>
-    <div class="contact__form">
+    <header class="contact__header gray-header">
+      <h1 class="contact__title gray-header__title"><?php the_title(); ?></h1>
+    </header>
+    <div class="contact__form content-width">
       <?php the_field( 'contact_shortcode' ); ?>
     </div>
 
@@ -36,7 +39,5 @@ get_header();
 
 	endif;
 	?>
-
-<h1>Contact</h1>
 
 <?php get_footer(); ?>

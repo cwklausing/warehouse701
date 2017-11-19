@@ -7,6 +7,7 @@ body {
   font-family: $primary-font;
   line-height: 1.6;
   color: $black;
+  word-wrap: break-word;
 }
 
 h1,
@@ -31,7 +32,7 @@ h3 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 a {

@@ -2,7 +2,7 @@
 /**
  * Front Page Content
  *
- * @package wh701;
+ * @package painters_bld;
  */
 
 $home_gallery = get_field( 'home_page_image' )['sizes']['large'];

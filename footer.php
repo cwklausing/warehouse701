@@ -18,8 +18,8 @@ $bubble_text = get_field( 'bubble_text', 'option' );
       <span class="footer__phone"><?php echo esc_html($phone); ?></span>
       <a href="<?php echo esc_url( 'mailto:' . $email ); ?>" class="footer__email"><?php echo esc_html($email); ?></a>
     </div>
-  <?php wp_footer(); ?>
-</footer>
-
+  </footer>
+  
+<?php wp_footer(); ?>
 </body>
 </html>
